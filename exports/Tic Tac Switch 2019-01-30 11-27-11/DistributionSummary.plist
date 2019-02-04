@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Tic Tac Switch.ipa</key>
+	<array>
+		<dict>
+			<key>architectures</key>
+			<array>
+				<string>arm64</string>
+			</array>
+			<key>certificate</key>
+			<dict>
+				<key>SHA1</key>
+				<string></string>
+				<key>dateExpires</key>
+				<string></string>
+				<key>type</key>
+				<string>Unknown</string>
+			</dict>
+			<key>name</key>
+			<string>Tic Tac Switch.app</string>
+			<key>team</key>
+			<dict>
+				<key>id</key>
+				<string>Z2D62J633K</string>
+				<key>name</key>
+				<string>Rogelio Schevenin (Individual)</string>
+			</dict>
+		</dict>
+	</array>
+</dict>
+</plist>

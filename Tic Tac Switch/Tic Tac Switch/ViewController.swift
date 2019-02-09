@@ -13,6 +13,7 @@ import AudioToolbox
 class ViewController: UIViewController {
     @IBOutlet weak var topImage: UIImageView!
     @IBOutlet weak var restartButton: UIButton!
+	@IBOutlet weak var settingsButton: UIButton!
     let urlClickSound    = Bundle.main.url(forResource: "click", withExtension: "mp3")
     let urlPlaceSound    = Bundle.main.url(forResource: "place", withExtension: "mp3")
     let urlGrabSound     = Bundle.main.url(forResource: "grab", withExtension: "mp3")
@@ -23,17 +24,16 @@ class ViewController: UIViewController {
     var audioPlayerPlace: AVAudioPlayer!
     var audioPlayerRestart: AVAudioPlayer!
     var activePlayer     = 1 //cross
-    var crossAmount      = 3 //cross turns
-    var circleAmount     = 3 //circle turns
+    var crossAmount      = 3 //cross's turns
+    var circleAmount     = 3 //circle's turns
     var tileState        = [0,0,0,0,0,0,0,0,0]
     var currentTileState = [6,9,6,9,6,1,3,3,7]
     var gameIsOver = false
-    
     //when tile is clicked
     @IBAction func click(_ sender: AnyObject) {
         restartButton.isEnabled = true
         //player 1
-        if (activePlayer == 1 && gameIsOver == false){
+        if (activePlayer == 1 && !gameIsOver){
             //has turns left
             if (crossAmount > 0) {
                 //clicks on free tile
@@ -101,8 +101,8 @@ class ViewController: UIViewController {
                 }
             }
         }
-        // player 2
-        else if (activePlayer == 2 && gameIsOver == false){
+        //player 2
+        else if (activePlayer == 2 && !gameIsOver){
             //has turns left
             if (circleAmount > 0) {
                 //clicks on free tile
@@ -221,18 +221,16 @@ class ViewController: UIViewController {
             button.setImage(nil, for: UIControl.State())
             }
         self.topImage.image = #imageLiteral(resourceName: "tictacswitch")
-        }
-    
+	}
+	//when settingsButton is clicked
     @IBAction func showSettings(_ sender: Any){
         audioPlayerClick.stop()
         audioPlayerClick.play()
     }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        restartButton.isEnabled = false
         view.addBackground(imageName: "background.jpg")
-        
         do {
             try AVAudioSession.sharedInstance().setCategory(AVAudioSession.Category.ambient, mode: .default)
             try AVAudioSession.sharedInstance().setActive(true)
@@ -241,7 +239,6 @@ class ViewController: UIViewController {
         }catch let error as NSError {
             print(error.debugDescription)
         }
-        
         do {
             try AVAudioSession.sharedInstance().setCategory(AVAudioSession.Category.ambient, mode: .default)
             try AVAudioSession.sharedInstance().setActive(true)

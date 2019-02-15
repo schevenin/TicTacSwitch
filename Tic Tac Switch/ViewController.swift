@@ -16,7 +16,7 @@ import AudioToolbox
 class ViewController: UIViewController {
     @IBOutlet weak var topImage: UIImageView!
     @IBOutlet weak var restartButton: UIButton!
-	@IBOutlet weak var settingsButton: UIButton!
+    @IBOutlet weak var settingsButton: UIButton!
     let urlClickSound    = Bundle.main.url(forResource: "click", withExtension: "mp3")
     let urlPlaceSound    = Bundle.main.url(forResource: "place", withExtension: "mp3")
     let urlGrabSound     = Bundle.main.url(forResource: "grab", withExtension: "mp3")

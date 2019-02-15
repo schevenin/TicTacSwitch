@@ -5,6 +5,9 @@
 //  Created by Rogelio Schevenin on 1/27/19.
 //  Copyright © 2019 SDO. All rights reserved.
 //
+//  Documented and open source for public use
+//  Have fun :)
+//
 
 import UIKit
 import AVFoundation
@@ -53,9 +56,10 @@ class ViewController: UIViewController {
                         activePlayer = 2
                         //console
                         print("+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+")
-                        print("Tile's state has changed to: \(tileState[sender.tag-1])")
-                        print("Turns left for player \(activePlayer): \(crossAmount)")
                         print("Tile States: \(tileState)")
+                        print("Tile \(sender.tag as Int)'s state has changed to: \(tileState[sender.tag-1])")
+                        print("It is now player \(activePlayer)'s turn")
+                        print("+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+")
                     }
                     //else if tile is placed in same location
                     else if (currentTileState == tileState){
@@ -70,9 +74,10 @@ class ViewController: UIViewController {
                         //activePlayer = 1
                         //console
                         print("+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+")
-                        print("Tile's state has changed to: \(tileState[sender.tag-1])")
-                        print("Turns left for player \(activePlayer): \(crossAmount)")
                         print("Tile States: \(tileState)")
+                        print("Tile \(sender.tag as Int)'s state has changed to: \(tileState[sender.tag-1])")
+                        print("It is now player \(activePlayer)'s turn")
+                        print("+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+")
                     }
                 }
             }
@@ -95,9 +100,10 @@ class ViewController: UIViewController {
                     //activePlayer = 1
                     //console
                     print("+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+")
-                    print("Tile's state has changed to: \(tileState[sender.tag-1])")
-                    print("Turns left for player \(activePlayer): \(crossAmount)")
                     print("Tile States: \(tileState)")
+                    print("Tile \(sender.tag as Int)'s state has changed to: \(tileState[sender.tag-1])")
+                    print("It is now player \(activePlayer)'s turn")
+                    print("+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+")
                 }
             }
         }
@@ -122,9 +128,10 @@ class ViewController: UIViewController {
                         activePlayer = 1
                         //console
                         print("+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+")
-                        print("Tile's state has changed to: \(tileState[sender.tag-1])")
-                        print("Turns left for player \(activePlayer): \(crossAmount)")
                         print("Tile States: \(tileState)")
+                        print("Tile \(sender.tag as Int)'s state has changed to: \(tileState[sender.tag-1])")
+                        print("It is now player \(activePlayer)'s turn")
+                        print("+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+")
                     }
                     //else if tile is placed in same location
                     else if (currentTileState == tileState){
@@ -139,9 +146,10 @@ class ViewController: UIViewController {
                         //activePlayer = 2
                         //console
                         print("+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+")
-                        print("Tile's state has changed to: \(tileState[sender.tag-1])")
-                        print("Turns left for player \(activePlayer): \(crossAmount)")
                         print("Tile States: \(tileState)")
+                        print("Tile \(sender.tag as Int)'s state has changed to: \(tileState[sender.tag-1])")
+                        print("It is now player \(activePlayer)'s turn")
+                        print("+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+")
                     }
                 }
             }
@@ -164,9 +172,10 @@ class ViewController: UIViewController {
                     //activePlayer = 2
                     //console
                     print("+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+")
-                    print("Tile's state has changed to: \(tileState[sender.tag-1])")
-                    print("Turns left for player \(activePlayer): \(crossAmount)")
                     print("Tile States: \(tileState)")
+                    print("Tile \(sender.tag as Int)'s state has changed to: \(tileState[sender.tag-1])")
+                    print("It is now player \(activePlayer)'s turn")
+                    print("+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+")
                 }
             }
         }
@@ -182,10 +191,10 @@ class ViewController: UIViewController {
                     //cross has won
                     //console
                     print("+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+")
-                    print("Tile's state has changed to: \(tileState[sender.tag-1])")
-                    print("Turns left for player \(activePlayer): \(crossAmount)")
                     print("Tile States: \(tileState)")
-                    print("CROSS WON")
+                    print("Tile \(sender.tag as Int)'s state has changed to: \(tileState[sender.tag-1])")
+                    print("It is now player \(activePlayer)'s turn")
+                    print("+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+")
                 }
                 else {
                     self.topImage.image = #imageLiteral(resourceName: "win-circle.png")
@@ -195,10 +204,10 @@ class ViewController: UIViewController {
                     //circle has won
                     //console
                     print("+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+")
-                    print("Tile's state has changed to: \(tileState[sender.tag-1])")
-                    print("Turns left for player \(activePlayer): \(crossAmount)")
                     print("Tile States: \(tileState)")
-                    print("CIRCLE WON" )
+                    print("Tile \(sender.tag as Int)'s state has changed to: \(tileState[sender.tag-1])")
+                    print("It is now player \(activePlayer)'s turn")
+                    print("+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+")
                 }
                 
             }

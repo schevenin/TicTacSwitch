@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ### Swift ###
 # Xcode
 #
@@ -76,3 +77,7 @@ fastlane/test_output
 # https://github.com/johnno1962/injectionforxcode
 
 iOSInjectionProject/
+=======
+
+*.icloud
+>>>>>>> a906319a241b73aeca16527e9953e9cefb945178
